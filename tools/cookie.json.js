@@ -1,0 +1,47 @@
+[{
+    'domain': '.zhihu.com',
+    'expiry': 1533476809.503579,
+    'httpOnly': True,
+    'name': 'z_c0',
+    'path': '/',
+    'secure': False,
+    'value': '"2|1:0|10:1517924809|4:z_c0|80:MS4xUk5LWUFnQUFBQUFtQUFBQVlBSlZUY25fWmx0UFc1ektLTFJSbDk1a2pjZ0VEOEdlUmZtWFh3PT0=|3d34ced2e3b44603c964671e6dbf87eafb3784e970aab5a24294e288db77fff6"'
+}, {
+    'domain': '.zhihu.com',
+    'httpOnly': False,
+    'name': '_xsrf',
+    'path': '/',
+    'secure': False,
+    'value': '76586f30-d1af-490b-b88f-d594aa415a7a'
+}, {
+    'domain': '.zhihu.com',
+    'expiry': 1580996808,
+    'httpOnly': False,
+    'name': '_zap',
+    'path': '/',
+    'secure': False,
+    'value': '5d416b09-993a-427a-bf3e-51013595a800'
+}, {
+    'domain': '.zhihu.com',
+    'expiry': 1520516808.240728,
+    'httpOnly': True,
+    'name': 'capsion_ticket',
+    'path': '/',
+    'secure': False,
+    'value': '"2|1:0|10:1517924808|14:capsion_ticket|44:MmY0OTBmNzMwZGExNGMxOWIyZDIxNTkzODg0NmI0NzA=|ff2f6a1432212b454dc17010cb2b9264be076b94baaf12e9573fc2780376d795"'
+}, {
+    'domain': '.zhihu.com',
+    'expiry': 1612532806.444423,
+    'httpOnly': True,
+    'name': 'q_c1',
+    'path': '/',
+    'secure': False,
+    'value': '025d5401d13143b7857383285229f35c|1517924806000|1517924806000'
+}, {
+    'domain': 'www.zhihu.com',
+    'httpOnly': True,
+    'name': 'aliyungf_tc',
+    'path': '/',
+    'secure': False,
+    'value': 'AQAAAAnDsQc1SgMAb/5H3ufoJf0RW/bW'
+}]

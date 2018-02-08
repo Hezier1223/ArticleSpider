@@ -1,4 +1,6 @@
 # Created by Max on 2/3/18
+import re
+
 __author__ = 'Max'
 import hashlib
 
@@ -11,5 +13,10 @@ def get_md5(url):
     return m.hexdigest()
 
 
-if __name__ == '__main__':
-    print(get_md5('http://baidu.com'))
+# 从字符串提取数字
+def extract_num(text):
+    match_re = re.match('.*?(/d+).*', text)
+    if match_re:
+        return int(match_re.group(1))
+    else:
+        return 0
