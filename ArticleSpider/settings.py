@@ -52,9 +52,11 @@ ROBOTSTXT_OBEY = False
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
-# DOWNLOADER_MIDDLEWARES = {
-#    'ArticleSpider.middlewares.ArticlespiderDownloaderMiddleware': 543,
-# }
+DOWNLOADER_MIDDLEWARES = {
+    # 'ArticleSpider.middlewares.ArticlespiderDownloaderMiddleware': 543,
+    'ArticleSpider.middlewares.RandomUserAgentMiddleware': 543,
+    'scrapy.downloadermiddlewares.UserAgentMiddleware': None
+}
 
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
@@ -72,7 +74,7 @@ ITEM_PIPELINES = {
     # 'ArticleSpider.pipelines.JsonExporterPipeline': 3,
     'ArticleSpider.pipelines.MysqlTwistedPipeline': 3
 }
-IMAGES_URLS_FIELD = "front_image_url"
+IMAGES_URLS_FIELD = 'front_image_url'
 project_dir = os.path.abspath(os.path.dirname(__file__))
 IMAGES_STORE = os.path.join(project_dir, 'images')
 
@@ -98,12 +100,15 @@ IMAGES_STORE = os.path.join(project_dir, 'images')
 # HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 
-MYSQL_HOST = "127.0.0.1"
-MYSQL_DBNAME = "article_spider"
-MYSQL_USER = "root"
-MYSQL_PASSWORD = "root"
+MYSQL_HOST = '127.0.0.1'
+MYSQL_DBNAME = 'article_spider'
+MYSQL_USER = 'root'
+MYSQL_PASSWORD = 'root'
 
-SQL_DATETIME_FORMAT = "%Y-%m-%d %H:%M:%S"
-SQL_DATE_FORMAT = "%Y-%m-%d"
+SQL_DATETIME_FORMAT = '%Y-%m-%d %H:%M:%S'
+SQL_DATE_FORMAT = '%Y-%m-%d'
 
-# ES_HOST = "127.0.0.1"
+USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) ' \
+             'Chrome/36.0.1944.0 Safari/537.36 '
+
+# ES_HOST = '127.0.0.1'
