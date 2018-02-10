@@ -54,8 +54,8 @@ ROBOTSTXT_OBEY = False
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
     # 'ArticleSpider.middlewares.ArticlespiderDownloaderMiddleware': 543,
-    'ArticleSpider.middlewares.RandomUserAgentMiddleware': 543,
-    'scrapy.downloadermiddlewares.UserAgentMiddleware': None
+    # 'ArticleSpider.middlewares.RandomUserAgentMiddleware': 543,
+    # 'scrapy.downloadermiddlewares.UserAgentMiddleware': None
 }
 
 # Enable or disable extensions
