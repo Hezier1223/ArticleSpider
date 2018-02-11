@@ -5,6 +5,7 @@ import re
 import scrapy
 import time
 
+# from pyvirtualdisplay import Display
 from scrapy.loader import ItemLoader
 from selenium import webdriver
 from urllib import parse
@@ -34,6 +35,8 @@ class ZhihuSpider(scrapy.Spider):
 
     def start_requests(self):
         # 利用浏览器进行知乎登录
+        # display = Display(visible=0, size=(800, 600))
+        # display.start()
         browser = webdriver.Chrome(executable_path='/Users/Arthur/Documents/chromedriver')
         browser.get('https://www.zhihu.com/signin')
         browser.find_element_by_css_selector('.SignFlow-accountInput.Input-wrapper input').send_keys('13611969835')
