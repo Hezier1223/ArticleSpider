@@ -11,6 +11,7 @@ class JobboleSpider(scrapy.Spider):
     name = 'jobbole'
     allowed_domains = ['web.jobbole.com']
     start_urls = ['http://web.jobbole.com/all-posts/']
+    handle_httpstatus_list = [404]
 
     def parse(self, response):
         post_nodes = response.css("#archive .floated-thumb .post-thumb a")

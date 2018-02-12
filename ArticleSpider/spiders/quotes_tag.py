@@ -2,16 +2,19 @@
 import scrapy
 from urllib import parse
 
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-
-from ArticleSpider.models.quote import Quote
-
 
 class QuotesTagSpider(scrapy.Spider):
     name = 'quotes_tag'
     allowed_domains = ['quotes.toscrape.com']
     start_urls = ['http://quotes.toscrape.com/']
+
+    def __init__(self, stats):
+        print(stats)
+        self.stats = stats
+
+    @classmethod
+    def from_crawler(cls, crawler):
+        return cls(crawler.stats)
 
     def parse(self, response):
         self.logger.info(response.url)

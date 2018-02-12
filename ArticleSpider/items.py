@@ -53,6 +53,13 @@ def return_value(value):
     return value
 
 
+class Product(scrapy.Item):
+    name = scrapy.Field()
+    price = scrapy.Field()
+    stock = scrapy.Field()
+    last_updated = scrapy.Field(serializer=str)
+
+
 class ArticleItemLoader(ItemLoader):
     # 自定义ItemLoader
     default_output_processor = TakeFirst()
